@@ -7,9 +7,7 @@ from .models import Documento
 class DocumentoForm(forms.ModelForm):
     class Meta:
         model = Documento
-        fields = ['nombre_empresa', 
-                  'departamento', 
-                  'sub_departamento', 
+        fields = [
                   'titulo', 
                   'folio', 
                   'archivo']
