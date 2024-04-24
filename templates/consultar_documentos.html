@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Documentos</title>
+</head>
+<body>
+    <h1>Consultar Documentos</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text" name="nombre_empresa" placeholder="Nombre Empresa">
+        <input type="text" name="departamento" placeholder="Departamento">
+        <input type="text" name="titulo" placeholder="Título">
+        <input type="text" name="folio" placeholder="Folio">
+        <button type="submit">Consultar</button>
+    </form>
+
+    <h2>Resultados</h2>
+    <ul>
+        {% for documento in documentos %}
+            <li>
+                {{ documento.titulo }} - {{ documento.folio }}
+                <button onclick="location.href='{{ documento.get_absolute_url }}'">Ver</button>
+                <button onclick="location.href='{{ documento.get_modificar_url }}'">Modificar</button>
+                <form method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="documento_id" value="{{ documento.id }}">
+                    <button type="submit" name="eliminar">Eliminar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
