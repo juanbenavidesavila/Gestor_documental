@@ -1,8 +1,9 @@
 from django.urls import path
 
-from . import views
+from .views import g_consul, g_add, index
 
 urlpatterns = [
-    path('', views.consultar_documentos, name='consultar_documentos'),
-    path('agregar/', views.agregar_documento, name='agregar_documento'),
+    path('', index),
+    path('gestor/consul', g_consul),
+    path('gestor/add', g_add),
 ]

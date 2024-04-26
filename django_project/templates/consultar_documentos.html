@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+.table, th, td {
+  border-collapse: collapse;
+}
+</style>
+  <form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          <input placeholder="Folio" name="folio" type="text">
+        </th>
+        <th>
+           <input placeholder="Titulo" name="titulo" type="text">
+        </th>
+        <th>
+          <button class="btn btn-primary" type="submit">Consultar</button>
+        </th>
+      </tr>
+      <tr>
+        <th>Folio</th>
+        <th>Titulo</th>
+        <th>Documento</th>
+        <th>Departamento</th>
+        <th>Año</th>
+        <th>Mes</th>
+        <th>Archivo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for v in doc %}
+      <tr>
+        <td>{{ v.get_folio_display }}</td>
+        <td>{{ v.titulo }}</td>
+        <td>{{ v.documento }}</td>
+        <td>{{ v.departamento }}</td>
+        <td>{{ v.año }}</td>
+        <td>{{ v.mesmes }}</td>
+        <td>{{ v.archivo }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colespan="6"> 🫡 No se encontraron datos del Documento</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </form>
+{% endblock %}

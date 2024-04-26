@@ -1,0 +1,8 @@
+body {background: beige}
+input {
+  border: 3px solid black;
+}
+
+.class="table"{
+  displey: flex
+}

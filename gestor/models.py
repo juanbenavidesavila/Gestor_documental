@@ -1,31 +1,44 @@
 from django.db import models
 
 
-class Empresa(models.Model):
-    nombre = models.CharField(max_length=100)
-
-    def _str_(self):
-        return self.nombre
-
-class Departamento(models.Model):
-    empresa = models.ForeignKey(Empresa, on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=100)
-
-    def _str_(self):
-        return self.nombre
-
-class SubDepartamento(models.Model):
-    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=100)
-
-    def _str_(self):
-        return self.nombre
-
 class Documento(models.Model):
-    sub_departamento = models.ForeignKey(SubDepartamento, on_delete=models.CASCADE)
-    titulo = models.CharField(max_length=100)
-    folio = models.CharField(max_length=50)
-    archivo = models.FileField(upload_to='documentos/')
+  tipo_documentos = [
+                    ["General", "General"],
+                    ["Circular", "Circular"],
+                    ["Minuta", "Minuta"],
+                    ["Nota", "Nota"],
+                    ["Oficio", "Oficio"],
+                   ]
+  documento = models.CharField(max_length=20, 
+                                choices=tipo_documentos, 
+                                default="General")
+  
+  departamentos = [["Contabilidad", "Contabilidad"],
+                  ["RRHH", "RRHH"],
+                  ["Informatica", "Informatica"]]
+  
+  departamento = models.CharField(max_length=20, 
+                                  choices=departamentos, 
+                                  default="Informatica")
 
-    def _str_(self):
-        return self.titulo
+  titulo = models.CharField(max_length=50)
+
+  folio = models.CharField(max_length=20)
+  
+  año = models.CharField(max_length=5, default="2024")
+
+  mes = models.CharField(max_length=5, default="01")
+  
+  archivo = models.FileField(upload_to='documentos/')
+  
+  #auto_now_add Se anade una sola vez, cuando se crea el registro
+  creacion = models.DateTimeField(auto_now_add=True)
+  #auto_now Se modifica con cada cambio que se realize en el registro
+  modificacion = models.DateTimeField(auto_now=True)
+
+  class Meta:
+      permissions = [("consultar_documentos", "Consultar documentos")]
+
+      permissions = [("agregar_documento", "Agregar documento")]
+    
+      permissions = [("eliminar_documento", "Eliminar documento")]
