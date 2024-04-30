@@ -4,6 +4,7 @@ from django.db import models
 class Documento(models.Model):
   tipo_documentos = [
                     ["General", "General"],
+                    ["Resolucion", "Resolucion"],
                     ["Circular", "Circular"],
                     ["Minuta", "Minuta"],
                     ["Nota", "Nota"],
@@ -13,9 +14,16 @@ class Documento(models.Model):
                                 choices=tipo_documentos, 
                                 default="General")
   
-  departamentos = [["Contabilidad", "Contabilidad"],
+  departamentos = [
+                  ["Contabilidad", "Contabilidad"],
+                  ["Administracion", "Administracion"],
+                  ["Secreataria", "Secretaria"],
                   ["RRHH", "RRHH"],
-                  ["Informatica", "Informatica"]]
+                  ["Informatica", "Informatica"],
+                  ["Finanzas", "Finanzas"],
+                  ["Sistemas", "Sistemas"],
+                  ["Educacion", "Educacion"],
+                  ]  
   
   departamento = models.CharField(max_length=20, 
                                   choices=departamentos, 
