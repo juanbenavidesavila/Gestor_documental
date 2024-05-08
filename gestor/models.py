@@ -4,7 +4,6 @@ from django.db import models
 class Documento(models.Model):
   tipo_documentos = [
                     ["General", "General"],
-                    ["Resolucion", "Resolucion"],
                     ["Circular", "Circular"],
                     ["Minuta", "Minuta"],
                     ["Nota", "Nota"],

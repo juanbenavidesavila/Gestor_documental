@@ -6,7 +6,7 @@ class LaboratorioTests(TestCase):
     @classmethod
     def setUpTestData(cls):
       cls.x = Documento()
-      cls.x.precio = 1
+      cls.x.folio = 1
       cls.x.save()
 
     def test_laboratorio_content(self):
