@@ -1,9 +1,26 @@
-body {background: white}
-input {
-  border: 3px solid black;
+body {
+  background-color: #7FFFD4; /* Cambié el color de fondo a azul agua marina */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.class="table"{
-  displey: flex
+nav.navbar {
+  background-color: #343a40; /* Cambié el color de fondo del navbar a gris oscuro */
+  border-bottom: none; /* Eliminé el borde inferior del navbar */
 }
-	
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: flex-end; /* Alineé el contenido del navbar a la derecha */
+  padding-right: 20px; /* Añadí un poco de espacio al final del navbar */
+}
+
+.navbar a.nav-link.active {
+  color: #ffffff; /* Cambié el color del texto activo a blanco */
+  margin-right: 20px; /* Añadí un poco de espacio entre el texto y el borde derecho */
+}
+
+.container {
+  padding-top: 20px; /* Añadí espacio en la parte superior del contenido */
+}
