@@ -1,26 +1,49 @@
+/* Estilos para el cuerpo de la página */
 body {
-  background-color: #7FFFD4; /* Cambié el color de fondo a azul agua marina */
+  font-family: Arial, sans-serif; /* Utiliza una fuente fácil de leer */
+  background-color: #f0f8ff; /* Cambia el color de fondo a un tono más suave de azul */
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
+/* Estilos para la barra de navegación */
 nav.navbar {
-  background-color: #343a40; /* Cambié el color de fondo del navbar a gris oscuro */
-  border-bottom: none; /* Eliminé el borde inferior del navbar */
+  background-color: #343a40; /* Cambia el color de fondo del navbar a gris oscuro */
+  border-bottom: none; /* Elimina el borde inferior del navbar */
 }
 
 .navbar .container-fluid {
   display: flex;
-  justify-content: flex-end; /* Alineé el contenido del navbar a la derecha */
-  padding-right: 20px; /* Añadí un poco de espacio al final del navbar */
+  justify-content: flex-end; /* Alinea el contenido del navbar a la derecha */
+  padding-right: 20px; /* Añade un poco de espacio al final del navbar */
 }
 
 .navbar a.nav-link.active {
-  color: #ffffff; /* Cambié el color del texto activo a blanco */
-  margin-right: 20px; /* Añadí un poco de espacio entre el texto y el borde derecho */
+  color: #ffffff; /* Cambia el color del texto activo a blanco */
+  margin-right: 20px; /* Añade un poco de espacio entre el texto y el borde derecho */
 }
 
+/* Estilos para el contenedor principal */
 .container {
-  padding-top: 20px; /* Añadí espacio en la parte superior del contenido */
+  padding-top: 20px; /* Añade espacio en la parte superior del contenido */
+}
+
+/* Estilos para los botones */
+.btn {
+  margin: 10px; /* Añade un poco de espacio entre los botones */
+  padding: 10px 20px; /* Ajusta el relleno del botón */
+  font-size: 16px; /* Ajusta el tamaño del texto */
+  border: none; /* Elimina el borde */
+  border-radius: 5px; /* Añade bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s ease; /* Agrega un efecto de transición suave */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Cambia el color de fondo del botón primario a azul */
+  color: #fff; /* Cambia el color del texto a blanco */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
 }
