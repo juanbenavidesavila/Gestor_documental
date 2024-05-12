@@ -1,7 +1,7 @@
 /* Estilos para el cuerpo de la página */
 body {
   font-family: Arial, sans-serif; /* Utiliza una fuente fácil de leer */
-  background-color: linear-gradient(135deg, #ffff99, #add8e6, #b2fabb, #7fffd4,#ffb347 ); /* Fondo con degradado de colores pastel */
+  background: linear-gradient(135deg, #ffff99, #add8e6, #b2fabb, #7fffd4,#ffb347 ); /* Fondo con degradado de colores pastel */
   margin: 0;
   padding: 0;
 }
