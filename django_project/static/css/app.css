@@ -1,15 +1,17 @@
 /* Estilos para el cuerpo de la página */
 body {
-  font-family: Arial, sans-serif; /* Utiliza una fuente fácil de leer */
-  background: linear-gradient(135deg, #ffff99, #add8e6, #b2fabb, #7fffd4,#ffb347 ); /* Fondo con degradado de colores pastel */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Utiliza una fuente fácil de leer */
+  font-size: 18px; /* Aumenta el tamaño del texto */
+  color: #333; /* Hace el texto más oscuro */
+  background: linear-gradient(to right, #ffb6c1, #ff69b4, #ff00ff, #7ec8e3, #00bfff, #7fff00, #ffff00); /* Fondo con degradado de colores pastel tipo arcoíris claro */
   margin: 0;
   padding: 0;
 }
 
-/* Estilos para la barra de navegación */
+/* Estilos para el barra de navegación */
 nav.navbar {
-  background-color:#00FF00 ; /* Cambia el color de fondo del navbar */
-  border-bottom: none; /* Elimina el borde inferior del navbar */
+  background-color: #7fffd4; /* Cambia el color de fondo del navbar a azul agua marina */
+  border-bottom: none; 
 }
 
 .navbar .container-fluid {
@@ -31,7 +33,7 @@ nav.navbar {
 /* Estilos para los botones */
 .btn {
   margin: 10px; /* Añade un poco de espacio entre los botones */
-  padding: 10px 20px; /* Ajusta el relleno del botón */
+  padding: 15px 30px; /* Ajusta el relleno del botón */
   font-size: 16px; /* Ajusta el tamaño del texto */
   border: none; /* Elimina el borde */
   border-radius: 5px; /* Añade bordes redondeados */
@@ -40,10 +42,37 @@ nav.navbar {
 }
 
 .btn-primary {
-  background-color: #007bff; /* Cambia el color de fondo del botón primario a azul */
+  background-color: #0084ff; /* Cambia el color de fondo del botón primario a amarillo */
   color: #fff; /* Cambia el color del texto a blanco */
+  font-size: 30px;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+  background-color: #00ff2a; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el título */
+h1 {
+  background-color: #fffb00; /* Colorea el fondo del título a amarillo */
+  font-weight: bold; /* Hace la letra más gruesa */
+  font-family: Algerian, sans-serif; 
+}
+/* Estilos para la tabla */
+table {
+  background-color: white;
+  border-collapse: collapse; /* Colapsa los bordes de la tabla */
+  width: 100%; /* Ancho de la tabla al 100% del contenedor */
+}
+
+/* Estilos para las celdas de la tabla */
+table td, table th {
+  background-color:yellow;
+  border: 1px solid red; /* Establece un borde delgado */
+  padding: 8px; /* Añade espacio alrededor del contenido */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+/* Estilo específico para el botón de selección de archivos */
+input[type="file"] {
+  background-color: yellow; /* Color de fondo amarillo */
+  
 }
